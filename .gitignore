@@ -1,3 +1,9 @@
+**/*.pyc
+.DS_Store
+
+**/.idea
+**/.ipynb_checkpoints
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +133,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm IDE
+.idea
