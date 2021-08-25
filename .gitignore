@@ -136,3 +136,6 @@ dmypy.json
 
 # PyCharm IDE
 .idea
+
+# Ignoring Data file as GitHub will not accept 140MB file
+data/creditcard.csv
