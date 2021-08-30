@@ -139,3 +139,6 @@ dmypy.json
 
 # Ignoring Data file as GitHub will not accept 140MB file
 data/creditcard.csv
+
+# Ignore the trigger script created for activating environment and trigger jupyter instance for faster performance
+trigger.bat
