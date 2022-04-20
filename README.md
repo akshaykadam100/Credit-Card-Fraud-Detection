@@ -41,11 +41,24 @@ The project pipeline can be briefly summarised in the following four steps:
 
 Above dataset was validated on various models using oversampling techniques and below are the details:
 
-| Sampling <br/>Technique | Model    | Precision (%) | Recall (%)   
-|-------------------------|----------|-----------|----------------- |
-| `Sampled Data`          | Logistic | `2.21`    | `94.74`| 
-| `Sampled Data`          | Decision Tree | `79.79`    | `78.95`| 
-| `Sampled Data`          | Random Forest | `90.41`    | `69.47`| 
-| `Sampled Data`          | Gradient Boosting | `67.29`    | `75.49`| 
-| `Sampled Data`          | XG Boost | `94.94`    | `78.95`| 
-| `Sampled Data`          | ANN | `99.98`    | `99.98`| 
+| Recall Table | Decision Tree    | ANN | Logistics | Gradient Boost | XG Boost | Random Forest 
+|-------------------------|----------|-----------|----------------- | --------- | ---------- | ------------ |
+| `Imbalanced`        | 84.21 | 99.9  |       93.68 | 78.95 | 81.05 | 61.05 |
+| `Random Oversample` | 86.32 | 97.34 |       94.74 | 86.32 | 86.32 | 89.47 |
+| `SMOTE`             | 88.42 | 98.11 |       91.58 | 90.53 | 88.42 | 90.53 |
+| `ADASYNC`           | 92.63 | 95.99 |       93.68 | 89.47 | 86.32 | 90.53 |
+
+| Precision Table | Decision Tree    | ANN | Logistics | Gradient Boost | XG Boost | Random Forest 
+|-------------------------|----------|-----------|----------------- | --------- | ---------- | ------------ |
+| `Imbalanced`        | 48.78 | 99.9  |        2.72 | 78.12 | 93.9  | 82.86 |
+| `Random Oversample` | 36.44 | 97.34 |        2.9  | 53.95 | 89.13 | 55.92 |
+| `SMOTE`             | 11.59 | 98.11 |        3.99 | 27.48 | 75.68 | 34.96 |
+| `ADASYNC`           |  5.4  | 95.99 |        2.49 | 12.48 | 75.93 |  7.96 |
+
+
+1. **Logistic Regression** (logistics) ==> Even though providing a good Recall value, Precision is low which indicates that even though fraud are detected properly, but customer experience will be very bad as many transactions will be blocked.
+2. **Artificial Neural Network** (ann) ==> Neural Network show a consistent performance in Precision & Recall Values across all the sampling methods with the best performance observed in unsampled data.
+3. **Decision Tree** (dt) ==> Decision Trees even though having a significant Recall value, Precision is a bit of concern here. So this can be kept as backup.
+4. **Gradient Boosting** (gb) ==> Gradient Boosting even though having a significant Recall value, Precision is a bit of concern here. So this can be kept as backup.
+5. **XG-Boost** (xgb) ==> XG Boost seems to outperform all the models (except ANN) in terms of Precision. Although Recall value is a bit of concern here, but still there is a good trade-off between Precision & Recall.
+6. **Random Forest** (rf) ==> Random Forest even though having a significant Recall value, Precision is a bit of concern here. So this can be kept as backup.
