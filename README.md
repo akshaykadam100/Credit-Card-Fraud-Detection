@@ -41,9 +41,11 @@ The project pipeline can be briefly summarised in the following four steps:
 
 Above dataset was validated on various models using oversampling techniques and below are the details:
 
-| Sampling <br/>Technique | Model    | Precision | Recall   
+| Sampling <br/>Technique | Model    | Precision (%) | Recall (%)   
 |-------------------------|----------|-----------|----------------- |
-| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
-| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
-| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
-| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
+| `Sampled Data`          | Logistic | `2.21`    | `94.74`| 
+| `Sampled Data`          | Decision Tree | `79.79`    | `78.95`| 
+| `Sampled Data`          | Random Forest | `90.41`    | `69.47`| 
+| `Sampled Data`          | Gradient Boosting | `67.29`    | `75.49`| 
+| `Sampled Data`          | XG Boost | `94.94`    | `78.95`| 
+| `Sampled Data`          | ANN | `99.98`    | `99.98`| 
