@@ -36,3 +36,14 @@ The project pipeline can be briefly summarised in the following four steps:
 -   **Train/Test Split**: Now, you are familiar with the train/test split that you can perform to check the performance of your models with unseen data. Here, for validation, you can use the k-fold cross-validation method. You need to choose an appropriate k value so that the minority class is correctly represented in the test folds.
 -   **Model Building / Hyperparameter Tuning**: This is the final step at which you can try different models and fine-tune their hyperparameters until you get the desired level of performance on the given data set. You should try and check if you get a better model by various sampling techniques.
 -   **Model Evaluation**: Evaluate the models using appropriate evaluation metrics. Note that since the data is imbalanced, it is more important to identify the fraudulent transactions accurately than the non-fraudulent ones. Choose an appropriate evaluation metric that reflects this business goal.
+
+### Conclusion
+
+Above dataset was validated on various models using oversampling techniques and below are the details:
+
+| Sampling <br/>Technique | Model    | Precision | Recall   
+|-------------------------|----------|-----------|----------------- |
+| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
+| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
+| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
+| `Sampled Data`          | Logistic | `2.21`    | `94.74`          | 
